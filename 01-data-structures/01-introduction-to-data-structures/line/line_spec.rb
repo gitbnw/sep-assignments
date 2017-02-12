@@ -60,4 +60,3 @@ RSpec.describe Line, type: Class do
   end
 
 end
-#ok
