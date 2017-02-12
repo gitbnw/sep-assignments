@@ -1,0 +1,10 @@
+How does your data structure allow developers to access and manipulate the data?
+All use Class methods.
+Line allows you to push elements to it's array, identify which elements is at its front, middle, and back, and remove elements by their content.
+Screen allows insertion of an instance of the Pixel class and its x, y coordinates.  
+If a developer wanted to find a specific element in your data structure, how would you search for it?
+Line - The array index function on the Line class will attempt to index the given value person.  That will either return nil if not found or use the index value to refer to that position in the members array and return the corresponding value which will be the found person.  I think this would run into problems with identical names.
+Screen - The "at" method allows searching the matrix attribute for a pixel at the given coordinates.  I used a two dimensional array in order to make use of the integers as index values.
+What other real-world data can each structure represent?
+Line - Any non-repeating list like a grocery list.
+Screen - FOcusing on the 2d matrix attribute - any data with two coordinates - it helps here that we are dealing with integers and non-negative values.
