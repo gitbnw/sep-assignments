@@ -6,14 +6,23 @@ RSpec.describe Screen, type: Class do
   describe "#insert" do
     it "inserts a pixel at the proper x, y coordinates" do
       pixel = Pixel.new(255, 200, 175, 1, 1)
+<<<<<<< HEAD
       screen.insert(p, 1, 1)
       
       expect(screen.at(1, 1)).to eq pixel
+=======
+      screen.insert(pixel, 1, 1)
+      expect(screen.at(1, 1)).to eq pixel 
+>>>>>>> 503dfa332517e834f88a7daa7ef5f7c1418e70cc
     end
 
     it "retains color information upon insertion" do
       pixel = Pixel.new(255, 200, 175, 1, 1)
+<<<<<<< HEAD
       screen.insert(p, 1, 1)
+=======
+      screen.insert(pixel, 1, 1)
+>>>>>>> 503dfa332517e834f88a7daa7ef5f7c1418e70cc
       p1 = screen.at(1, 1)
       
       expect(p1.red).to eq pixel.red
@@ -24,6 +33,10 @@ RSpec.describe Screen, type: Class do
 
   describe "#at" do
     it "returns the pixel at a specific location" do
+<<<<<<< HEAD
+=======
+      pixel = Pixel.new(255, 200, 175, 1, 2)
+>>>>>>> 503dfa332517e834f88a7daa7ef5f7c1418e70cc
       screen.insert(pixel, 1, 2)
       p1 = screen.at(1, 2)
       
