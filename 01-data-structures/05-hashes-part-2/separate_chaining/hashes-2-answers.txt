@@ -1,0 +1,12 @@
+Double hashing
+- collisions are hashed a second time with a constant prime number that is smaller than the size of the table.
+K - (key % K) = number of steps in array to move forward from collision point.
+
+Consistent hashing
+- when a hash table is resized (collision occurs) only K/n keys need to be remapped on average, where K is the number of keys, and n is the number of slots.
+
+Rendezvous hashing
+- also called highest random weight hashing (HRW).  A client with a list of computers Cj looks up some key K by giving each computer a score Sj = hash( K | Cj ). The key, value pair K,V is stored on the computer with the highest score.
+
+Own techinique
+Use linear probing but instead of searching forward for the next open spot - search backwards as well.  Track whether it was forward or back step dy even vs odd.  This might smooth out some of the clustering but also might be slow.

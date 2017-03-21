@@ -47,6 +47,7 @@ class HashClass
     key.split(%r{\s*}).each do |letter|
       code += letter.ord 
     end
+    puts code
     return code % size
 
   end

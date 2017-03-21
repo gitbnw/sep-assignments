@@ -42,8 +42,11 @@ RSpec.describe OpenAddressing, type: Class do
       hash = OpenAddressing.new(1)
       hash["key"] = "value"
       expect(hash.size).to eq 1
-      hash["key"] = "second value"
+      # hash["key"] = "second value"
+      hash["diffkey"] = "second value"
       expect(hash.size).to eq 2
+      #this is wrong......... same key and new value is an update!
+      
     end
 
     it "sets the value of key to value" do
@@ -60,7 +63,7 @@ RSpec.describe OpenAddressing, type: Class do
     it "returns -1 if there are no open indices" do
       inception = OpenAddressing.new(1)
       inception["The Original"] = "The Best Movie Ever"
-      expect(inception.next_open_index(0)).to eq -1
+      expect(inception.next_open_index(0)).to eq (-1)
     end
 
   end
