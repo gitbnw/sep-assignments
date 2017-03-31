@@ -54,7 +54,7 @@ RSpec.describe BinarySearchTree, type: Class do
     end
   end
 
-  describe "#find(data)" do
+  describe "#find(data)"  do
     it "handles nil gracefully" do
       tree.insert(root, empire)
       tree.insert(root, mad_max_2)
@@ -62,7 +62,10 @@ RSpec.describe BinarySearchTree, type: Class do
     end
 
     it "properly finds a left node" do
+
       tree.insert(root, pacific_rim)
+      p tree.inspect
+      expect(tree.find(root, pacific_rim.title)).to eq pacific_rim
       expect(tree.find(root, pacific_rim.title).title).to eq "Pacific Rim"
     end
 
@@ -96,7 +99,7 @@ RSpec.describe BinarySearchTree, type: Class do
     end
   end
 
-  describe "#delete(data)" do
+  describe "#delete(data)"  do
     it "handles nil gracefully" do
       expect(tree.delete(root, nil)).to eq nil
     end
@@ -142,7 +145,7 @@ RSpec.describe BinarySearchTree, type: Class do
     end
   end
 
-  describe "#printf" do
+  describe "#printf", :focus => true do
      specify {
        expected_output = "The Matrix: 87\nStar Wars: Return of the Jedi: 80\nStar Wars: A New Hope: 93\nPacific Rim: 72\nInception: 86\nThe Martian: 92\nStar Wars: The Empire Strikes Back: 94\nBraveheart: 78\nThe Shawshank Redemption: 91\nMad Max 2: The Road Warrior: 98\nDistrict 9: 90\n"
        tree.insert(root, hope)
